@@ -1,5 +1,5 @@
 ---
-title: Obsidian with MkDocs
+title: Obsidian and MkDocs
 nav_order: 80
 layout: default
 ---
