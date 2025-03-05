@@ -5,7 +5,9 @@ theme: just-the-docs
 url: https://deuts.github.io/wiki
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Blog: https://deuts.org
+  About: https://deuts.org/i/about/
+  Contact: https://deuts.org/i/contact/
 
 nav_enabled: true
 color_scheme: dark
