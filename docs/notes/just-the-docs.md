@@ -1,5 +1,5 @@
 ---
-title: "Just the Docs Documentation"
+title: "Just the Docs"
 nav_order: 50
 parent: Notes
 ---
