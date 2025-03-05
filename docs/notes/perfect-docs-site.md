@@ -40,7 +40,7 @@ parent: Notes
 	- The documentation leaves a lot to be desired. They appear to have been written in Chinese and used Google Translate to translate into English
 - ## MkDocs
 	- Uses python out of the box
-	- With better [integration with Obsidian](https://deuts.org/wiki/docs/notes/obsidian-mkdocs.html)
+	- With better [integration with Obsidian]({% link docs/notes/obsidian-mkdocs.md %})
 		- Useful for interpage linking of markdown files
 			- Carries over to the rendered HTML page
 	- Material for MkDocs is so much for what I need
