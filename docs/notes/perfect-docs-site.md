@@ -35,7 +35,7 @@ parent: Notes
 	- Too cluttered for my taste
 - ## MkDocs
 	- Uses python out of the box
-	- With better [[obsidian-mkdocs|integration with Obsidian]]
+	- With better [integration with Obsidian](/docs/notes/obsidian-mkdocs)
 		- Useful for interpage linking of markdown files
 			- Carries over to the rendered HTML page
 	- Material for MkDocs is so much for what I need
