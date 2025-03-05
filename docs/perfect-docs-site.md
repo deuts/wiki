@@ -1,4 +1,5 @@
 ---
+title: "Perfect Docs"
 layout: default
 ---
 
