@@ -34,6 +34,7 @@ parent: Notes
 - 3 levels of page hierarchy: `Book >> Chapter >> Page` only
 - With robust API
 - Exported markdown is not strict markdown. It could sometimes contain HTML tags
+- I just don't like the `Book` method of organizing my documents/pages. I really need a navigation sidebar, and that navigation is not limited to 3 levels deep only.
 
 ## Hugo
 - More geared towards blogs rather than documentation
