@@ -23,6 +23,7 @@ It is not required, but *recommended* that child pages of the same parent is org
 ```markdown
 [integration with Obsidian]({% link docs/notes/obsidian-mkdocs.md %})
 ```
+Note: the above code has been converted by Jekyll. Apparently it rendered the `shortcode`. So better check out the Jekyll documentation instead.
 
 To quote the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link):
 > The path to the post, page, or collection is defined as the path relative to the root directory (where your config file is) to the file, not the path from your existing page to the other page.
