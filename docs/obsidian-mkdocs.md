@@ -1,8 +1,11 @@
 ---
-title: Integrating Obsidian with MkDocs
+title: Obsidian with MkDocs
 nav_order: 80
 layout: default
 ---
+
+# Integrating Obsidian with MkDocs
+
 Obsidian is a powerful knowledge base that works on local Markdown files, while MkDocs is a fast, simple static site generator that's perfect for building documentation sites. Integrating these tools can create a seamless workflow from personal notes to published documentation.
 
 ## Best Practices for Integration
