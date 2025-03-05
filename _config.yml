@@ -9,3 +9,8 @@ aux_links:
 
 nav_enabled: true
 color_scheme: dark
+
+# Search
+search_enabled: true
+search: 
+  button: true
