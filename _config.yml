@@ -27,8 +27,15 @@ collections:
 just_the_docs:
   collections:
     docker:
-      name: Docker
+      name: Docker Apps
       nav_fold: true
 #    tutorials:
 #      name: Tutorials
 #      nav_fold: true
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: default
