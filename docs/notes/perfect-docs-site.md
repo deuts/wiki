@@ -29,6 +29,9 @@ parent: Notes
 
 ## Bookstack
 - PHP and MariaDB under the hood
+- Limited customization options
+  - There's no template gallery to speak of
+  - 
 
 ## Hugo
 - More geared towards blogs rather than documentation
