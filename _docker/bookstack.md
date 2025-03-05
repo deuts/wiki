@@ -1,1 +1,5 @@
+---
+title: Bookstack
+---
+
 # Bookstack
