@@ -1,0 +1,39 @@
+# The search for the perfect documentation site
+- ## Docmost
+	- Experienced delays while writing
+		- Delays when writing titles
+		- Delays to reflect the updated page when navigating back to that page
+	- Can add members, assign them to groups, and limit access to spaces within the whole instance
+- ## Otterwiki
+	- Has permission settings but not as granular as Docmost
+	- Has git integration
+	- Changelog/history included
+	- With customizable menus
+	- Can paste images from clipboard directly into the editor and saves in the file system
+	- What I hate:
+		- File naming convention:
+			- Should have the same filename.md and filename directory for subpages
+			- Auto-capitalize names
+				- Even if you have all caps - for example FAQ will be converted to Faq
+			- URL includes `%20` for spaces
+- ## Hugo
+	- More geared towards blogs rather than documentation
+	- Renders HTML
+- ## Outline
+	- Just couldn't make it work seamlessly
+		- Experienced several error while navigating the page
+		- Export didn't work
+		- Just so unreliable in my opinion
+- ## SiYuan
+	- Too cluttered for my taste
+- ## MkDocs
+	- Uses python out of the box
+	- With better [[obsidian-mkdocs|integration with Obsidian]]
+		- Useful for interpage linking of markdown files
+			- Carries over to the rendered HTML page
+	- Material for MkDocs is so much for what I need
+	- Renders HTML which can easily be shared in the future
+	- Can have pdf export if necessary
+- ## Jekyll
+	- I really liked the simplicity of `Just the Docs` theme
+	- Might be useful for my other wiki/documentation project, at least I'm learning something new
