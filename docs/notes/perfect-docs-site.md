@@ -2,6 +2,7 @@
 title: "Perfect Docs"
 layout: default
 nav_order: 40
+parent: Notes 
 ---
 
 # The search for the perfect documentation site

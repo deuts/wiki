@@ -2,6 +2,7 @@
 title: Obsidian and MkDocs
 nav_order: 80
 layout: default
+parent: Notes
 ---
 
 # Integrating Obsidian with MkDocs
