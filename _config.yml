@@ -1,16 +1,18 @@
 title: Deuts Docs
 description: The home of Deuts documents
 theme: just-the-docs
+color_scheme: dark
+
+nav_enabled: true
 
 url: https://deuts.github.io/wiki
 
+## Aux Links (upper right links)
 aux_links:
   Blog: https://deuts.org
   About: https://deuts.org/i/about/
   Contact: https://deuts.org/i/contact/
-
-nav_enabled: true
-color_scheme: dark
+aux_links_new_tab: true
 
 # Search
 search_enabled: true
