@@ -21,17 +21,19 @@ parent: Notes
 - Python under the hood
 - Can paste images from clipboard directly into the editor and saves in the file system
 - What I hate:
-- File naming convention:
-	- Should have the same filename.md and filename directory for subpages
-	- Auto-capitalize names
-		- Even if you have all caps - for example FAQ will be converted to Faq
-	- URL includes `%20` for spaces
+  - File naming convention:
+  	- Should have the same filename.md and filename directory for subpages
+  	- Auto-capitalize names
+  		- Even if you have all caps - for example FAQ will be converted to Faq
+  	- URL includes `%20` for spaces
 
 ## Bookstack
 - PHP and MariaDB under the hood
 - Limited customization options
   - There's no template gallery to speak of
-  - 
+- 3 levels of page hierarchy: `Book >> Chapter >> Page` only
+- With robust API
+- Exported markdown is not strict markdown. It could sometimes contain HTML tags
 
 ## Hugo
 - More geared towards blogs rather than documentation
