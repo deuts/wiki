@@ -2,7 +2,6 @@
 title: "Just the Docs Documentation"
 nav_order: 50
 parent: Notes
-nav_exclude: true
 ---
 # What are unique in Just the Docs
 
