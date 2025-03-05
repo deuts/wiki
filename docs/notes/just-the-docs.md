@@ -1,7 +1,7 @@
 ---
 title: Just the Docs
 nav_order: 50
-parent: notes
+parent: Notes
 ---
 # What are unique in Just the Docs
 Minimum frontmatter is `title` key.  This is assuming you have set the default layout in the `_config.yml` file, like so:
