@@ -1,10 +1,10 @@
 ---
 title: "Perfect Docs"
 layout: default
+
+---
 nav_order: 40
 parent: Notes 
----
-
 # The search for the perfect documentation site
 - ## Docmost
 	- Experienced delays while writing
@@ -16,6 +16,7 @@ parent: Notes
 	- Has git integration
 	- Changelog/history included
 	- With customizable menus
+	- Python under the hood
 	- Can paste images from clipboard directly into the editor and saves in the file system
 	- What I hate:
 		- File naming convention:
@@ -23,6 +24,8 @@ parent: Notes
 			- Auto-capitalize names
 				- Even if you have all caps - for example FAQ will be converted to Faq
 			- URL includes `%20` for spaces
+- ## Bookstack
+  - PHP and MariaDB under the hood
 - ## Hugo
 	- More geared towards blogs rather than documentation
 	- Renders HTML
@@ -33,6 +36,8 @@ parent: Notes
 		- Just so unreliable in my opinion
 - ## SiYuan
 	- Too cluttered for my taste
+	- Looks to aim to be a Notion alternative, with all its database feature
+	- The documentation leaves a lot to be desired. They appear to have been written in Chinese and used Google Translate to translate into English
 - ## MkDocs
 	- Uses python out of the box
 	- With better [integration with Obsidian](https://deuts.org/wiki/docs/notes/obsidian-mkdocs.html)
