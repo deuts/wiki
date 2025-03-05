@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # The search for the perfect documentation site
 - ## Docmost
 	- Experienced delays while writing
