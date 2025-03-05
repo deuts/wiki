@@ -1,6 +1,7 @@
 ---
 title: Deuts Wiki Home
 layout: home
+nav_order: 100
 ---
 
 # Welcome Home!

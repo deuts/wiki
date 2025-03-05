@@ -16,5 +16,3 @@ aux_links_new_tab: true
 
 # Search
 search_enabled: true
-search: 
-  button: true
