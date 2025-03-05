@@ -17,3 +17,18 @@ aux_links_new_tab: true
 
 # Search
 search_enabled: true
+
+collections:
+  docker:
+    output: true
+#  tutorials:
+#    output: true
+
+just_the_docs:
+  collections:
+    docker:
+      name: Docker
+      nav_fold: true
+#    tutorials:
+#      name: Tutorials
+#      nav_fold: true
