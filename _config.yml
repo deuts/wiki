@@ -2,6 +2,7 @@ title: Deuts Docs
 description: The home of Deuts documents
 theme: just-the-docs
 color_scheme: dark
+permalink: pretty
 favicon_ico: "/assets/images/wiki.ico"
 
 nav_enabled: true
