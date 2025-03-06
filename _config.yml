@@ -29,7 +29,7 @@ just_the_docs:
   collections:
     docker:
       name: Docker
-      nav_fold: true
+      nav_fold: false
 #    tutorials:
 #      name: Tutorials
 #      nav_fold: true
