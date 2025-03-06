@@ -4,7 +4,9 @@ nav_order: 0
 ---
 
 # Install Docker in Debian
-1. Set up Docker's apt repository:
+
+## Set up Docker's apt repository:
+
 ```sh
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -20,8 +22,11 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
-2. To install the latest version, run:
+
+## To install the latest version, run:
+
 ```sh
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
 ```
+
 [Read more](https://docs.docker.com/engine/install/debian/).
