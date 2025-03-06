@@ -7,7 +7,7 @@ title: Caddy
 services:
   caddy:
     image: caddy:latest
-    container_name: caddy-jekyll
+    container_name: caddy
     restart: unless-stopped
     ports:
       - "80:80"
