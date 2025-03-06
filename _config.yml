@@ -28,7 +28,7 @@ collections:
 just_the_docs:
   collections:
     docker:
-      name: Docker Apps
+      name: Docker
       nav_fold: true
 #    tutorials:
 #      name: Tutorials
