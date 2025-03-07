@@ -31,6 +31,7 @@ parent: Notes
 - PHP and MariaDB under the hood
 - Limited customization options
   - There's no template gallery to speak of
+  - If we're talking about PHP and MySQL/MariaDB anyway, why not just use WordPress instead?
 - 3 levels of page hierarchy: `Book >> Chapter >> Page` only
 - With robust API
 - With version history
