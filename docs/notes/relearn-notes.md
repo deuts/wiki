@@ -18,3 +18,5 @@ For a more detailed approach, use this instead:
 ```html
 {% raw %}{{% children containerstyle="div" style="h3" description="true" %}}{% endraw %}
 ```
+
+Documentation available [here](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/children/index.html).
