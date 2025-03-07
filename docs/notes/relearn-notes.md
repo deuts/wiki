@@ -13,9 +13,8 @@ The simplest syntax is:
 {{% children %}}{% endraw %}
 ```
 
-For a more detailed approach:
+For a more detailed approach, use this instead:
 
 ```html
-{% raw %}{{% children containerstyle="div" style="h3" description="true" %}}
-{% endraw %}
+{% raw %}{{% children containerstyle="div" style="h3" description="true" %}}{% endraw %}
 ```
