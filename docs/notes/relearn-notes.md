@@ -16,7 +16,6 @@ The simplest syntax is:
 For a more detailed approach:
 
 ```html
-{% raw %}
-{{% children containerstyle="div" style="h3" description="true" %}}
+{% raw %}{{% children containerstyle="div" style="h3" description="true" %}}
 {% endraw %}
 ```
