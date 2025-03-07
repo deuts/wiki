@@ -2,7 +2,7 @@
 title: Relearn Notes
 parent: Notes
 ---
-*Relearn Hugo theme notes for [mpidocs](https://mpidocs.deuts.org) project*
+*Relearn Hugo theme notes for [mpidocs](https://mpidocs.tuvillo.com) project*
 
 ## Child pages
 
