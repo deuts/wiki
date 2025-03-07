@@ -41,6 +41,10 @@ parent: Notes
 ## Hugo
 - More geared towards blogs rather than documentation
 - Renders HTML
+- Finally decided for this because:
+  - I'm quite familiar already with the templating system
+  - Just 1 executable file for the program, no more plugins to install
+  - I may be integrating some dynamic data into my documentation site using python in the future
 
 ## Outline
 - Just couldn't make it work seamlessly
@@ -61,6 +65,8 @@ parent: Notes
 - Material for MkDocs is so much for what I need
 - Renders HTML which can easily be shared in the future
 - Can have pdf export if necessary
+- Lot of plugins, lot of extensability, but unlike Hugo, the latter being just 1 executable file.
+  - The use of [Awesome Nav for MkDocs](https://lukasgeiter.github.io/mkdocs-awesome-nav/) plugin could streamline the navigation creation process for MkDocs, particularly for Material for MkDocs
 
 ## Jekyll
 - I really liked the simplicity of `Just the Docs` theme
