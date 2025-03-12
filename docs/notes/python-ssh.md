@@ -1,6 +1,7 @@
 ---
 title: Python Docker Image with SSH and MkDocs
-
+layout: default
+nav_order: 100
 parent: Notes
 ---
 
@@ -10,7 +11,7 @@ parent: Notes
 This documentation provides a step-by-step guide on setting up a Docker image based on `python:3.13.2-slim-bookworm`. The setup includes:
 - Enabling SSH
 - Installing essential packages
-- Creating a user (`deuts`)
+- Creating a user (`cont_user`)
 - Configuring SSH host keys and passwordless SSH
 - Setting up passwordless sudo
 - Implementing an entrypoint script to start services
@@ -27,19 +28,19 @@ RUN apt-get update && \
     apt-get install -y openssh-server sudo nano htop curl wget zip unzip tree git vim && \
     rm -rf /var/lib/apt/lists/*
 
-# Create the user 'deuts' with UID 1000 and GID 1000
-RUN groupadd -g 1000 deuts && \
-    useradd -m -u 1000 -g 1000 -s /bin/bash deuts
+# Create the user 'cont_user' with UID 1000 and GID 1000
+RUN groupadd -g 1000 cont_user && \
+    useradd -m -u 1000 -g 1000 -s /bin/bash cont_user
 
 # Ensure SSH folder exists
 RUN mkdir -p /run/sshd /etc/ssh
 
-# Create a system-wide profile script to add /home/deuts/.local/bin to the PATH
+# Create a system-wide profile script to add /home/cont_user/.local/bin to the PATH
 # This ensures that any executables installed in this directory are accessible globally
-RUN echo 'export PATH="/home/deuts/.local/bin:$PATH"' > /etc/profile.d/deuts_path.sh
+RUN echo 'export PATH="/home/cont_user/.local/bin:$PATH"' > /etc/profile.d/cont_user_path.sh
 
 # Enable passwordless sudo by ensuring correct file permissions
-RUN chmod 0440 /etc/sudoers.d/deuts
+RUN chmod 0440 /etc/sudoers.d/cont_user
 
 # Copy entrypoint script
 COPY config/entrypoint.sh /entrypoint.sh
@@ -75,8 +76,8 @@ fi
 
 # Start MkDocs in the background
 echo "Starting MkDocs..."
-cd /home/deuts/mkdocs/cashier-app || exit 1
-/home/deuts/.local/bin/mkdocs serve -a 0.0.0.0:8000 &
+cd /home/cont_user/mkdocs/cashier-app || exit 1
+/home/cont_user/.local/bin/mkdocs serve -a 0.0.0.0:8000 &
 
 # Start SSH daemon
 /usr/sbin/sshd -D
@@ -94,7 +95,7 @@ ssh-keygen -A -f config/ssh_host_keys
 By using `ssh-keygen -A -f config/ssh_host_keys`, all required SSH host keys are generated inside the `config/ssh_host_keys` directory before building the Docker image. This ensures that when the container starts, it already has the necessary keys to enable SSH access.
 
 ### Configuring Passwordless SSH
-To enable passwordless SSH for `deuts`, place the public key in `authorized_keys`.
+To enable passwordless SSH for `cont_user`, place the public key in `authorized_keys`.
 
 ```bash
 mkdir -p data/.ssh
@@ -104,19 +105,19 @@ chmod 600 data/.ssh/authorized_keys
 ```
 
 ## Enabling Passwordless Sudo
-To allow the `deuts` user to run commands as `root` without a password, create the following file on the host system:
+To allow the `cont_user` user to run commands as `root` without a password, create the following file on the host system:
 
 ```bash
-echo "deuts ALL=(ALL) NOPASSWD:ALL" | sudo tee config/sudoers.d/deuts
+echo "cont_user ALL=(ALL) NOPASSWD:ALL" | sudo tee config/sudoers.d/cont_user
 ```
 
 Ensure it has the correct permissions:
 
 ```bash
-chmod 0440 config/sudoers.d/deuts
+chmod 0440 config/sudoers.d/cont_user
 ```
 
-This file is mounted into the container at `/etc/sudoers.d/deuts`, ensuring `deuts` has passwordless sudo access.
+This file is mounted into the container at `/etc/sudoers.d/cont_user`, ensuring `cont_user` has passwordless sudo access.
 
 ## Configuring GitHub SSH Access
 To allow the container to interact with private GitHub repositories via SSH, follow these steps:
@@ -153,10 +154,10 @@ services:
     environment:
       - TZ=Asia/Manila
     volumes:
-      - ./data:/home/deuts
+      - ./data:/home/cont_user
       - ./config/ssh_host_keys:/etc/ssh
       - ./config/sudoers.d:/etc/sudoers.d
-      - /home/deuts/apps/php-server/app:/php-server
+      - /home/cont_user/apps/php-server/app:/php-server
     user: "1000:1000"
     networks:
       - caddynetwork
@@ -183,7 +184,7 @@ networks:
   ```
 - Connect via SSH:
   ```bash
-  ssh -p 2222 deuts@localhost
+  ssh -p 2222 cont_user@localhost
   ```
 - Ensure MkDocs is running:
   ```bash
