@@ -90,3 +90,26 @@ curl "http://localhost:9000/hooks/run-script?token=secret123"
 cat /home/deuts/apps/webhook/webhook.log
 ```
 
+---
+
+## **Optional: Configure Webhook to Run on a Different Port**
+By default, `webhook` runs on port **9000**. To change this, modify the systemd service:  
+
+```sh
+sudo nano /etc/systemd/system/webhook.service
+```
+Modify the `ExecStart` line to specify a different port (e.g., 8080):  
+```ini
+ExecStart=/usr/bin/webhook -hooks /etc/webhook/hooks.json -port 8080 -verbose
+```
+
+Reload systemd and restart `webhook`:  
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart webhook
+```
+
+Now, it will be accessible at:  
+```sh
+curl "http://localhost:8080/hooks/run-script?token=secret123"
+```
