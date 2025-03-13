@@ -70,7 +70,7 @@ parent: Notes
   - The use of [Awesome Nav for MkDocs](https://lukasgeiter.github.io/mkdocs-awesome-nav/) plugin could streamline the navigation creation process for MkDocs, particularly for Material for MkDocs
 - Just looks good actually. The obsidian integration is 1 factor I'm contemplating using this for `mpidocs`
 - What I hate about MkDocs:
-  - It can't parse 2-space indentation for sub-lists. You need to make it 4 spaces to properly render the sub-list
+  - It can't parse 2-space indentation for nested (sub) lists. You need to make it 4 spaces to properly render the sub-list
 
 ## Jekyll
 - I really liked the simplicity of `Just the Docs` theme
