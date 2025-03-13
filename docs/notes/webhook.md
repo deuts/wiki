@@ -116,6 +116,67 @@ curl "http://localhost:8080/hooks/run-script?token=secret123"
 
 ---
 
+## How to add more hooks
+
+If you need to add more hooks, just edit:  
+
+```sh
+nano /home/deuts/apps/webhook/hooks.json
+```
+
+Then add new webhook configurations inside the JSON array. Example:  
+
+```json
+[
+  {
+    "id": "run-script",
+    "execute-command": "/home/deuts/apps/webhook/scripts/myscript.sh",
+    "command-working-directory": "/home/deuts/apps/webhook/scripts",
+    "response-message": "Script executed successfully!",
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "value": "secret123",
+        "parameter": {
+          "source": "url",
+          "name": "token"
+        }
+      }
+    }
+  },
+  {
+    "id": "deploy-app",
+    "execute-command": "/home/deuts/apps/webhook/scripts/deploy.sh",
+    "command-working-directory": "/home/deuts/apps/webhook/scripts",
+    "response-message": "Deployment started!",
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "value": "deployme",
+        "parameter": {
+          "source": "url",
+          "name": "token"
+        }
+      }
+    }
+  }
+]
+```
+
+After editing, restart `webhook` to apply changes:  
+
+```sh
+sudo systemctl restart webhook
+```
+
+Then test:  
+
+```sh
+curl "http://localhost:9000/hooks/deploy-app?token=deployme"
+```
+
+---
+
 ## More explanation
 
 ### **Full JSON Example**
