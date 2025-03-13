@@ -1,11 +1,11 @@
 ---
-title: "Perfect Docs"
+title: "Perfect Docs Platform"
 layout: default
 nav_order: 40
 parent: Notes 
 ---
 
-# The search for the perfect documentation site
+# The search for the perfect documentation platform
 
 ## Docmost
 - Experienced delays while writing
