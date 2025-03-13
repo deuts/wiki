@@ -71,6 +71,7 @@ parent: Notes
 - Just looks good actually. The obsidian integration is 1 factor I'm contemplating using this for `mpidocs`
 - What I hate about MkDocs:
   - It can't parse 2-space indentation for nested (sub) lists. You need to make it 4 spaces to properly render the sub-list
+    - In this case, we'll use tabs instead of 2 spaces for nested lists, so it'll be compatible for both Obsidian and MkDocs, and any other system we might use the markdown files.
 
 ## Jekyll
 - I really liked the simplicity of `Just the Docs` theme
