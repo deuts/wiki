@@ -1,5 +1,5 @@
 ---
-title: Python Docker Image with SSH and MkDocs
+title: Python, SSH and MkDocs
 layout: default
 nav_order: 100
 parent: Notes
