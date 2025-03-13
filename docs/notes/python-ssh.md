@@ -11,7 +11,7 @@ parent: Notes
 This documentation provides a step-by-step guide on setting up a Docker image based on `python:3.13.2-slim-bookworm`. The setup includes:
 - Enabling SSH
 - Installing essential packages
-- Creating a user (`cont_user`)
+- Creating a container user (`cont_user`)
 - Configuring SSH host keys and passwordless SSH
 - Setting up passwordless sudo
 - Implementing an entrypoint script to start services

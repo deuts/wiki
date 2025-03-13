@@ -69,6 +69,8 @@ parent: Notes
 - Lot of plugins, lot of extensability, but unlike Hugo, the latter being just 1 executable file.
   - The use of [Awesome Nav for MkDocs](https://lukasgeiter.github.io/mkdocs-awesome-nav/) plugin could streamline the navigation creation process for MkDocs, particularly for Material for MkDocs
 - Just looks good actually. The obsidian integration is 1 factor I'm contemplating using this for `mpidocs`
+- What I hate about MkDocs:
+  - It can't parse very well 2-space indentation for sub-lists
 
 ## Jekyll
 - I really liked the simplicity of `Just the Docs` theme
