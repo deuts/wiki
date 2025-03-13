@@ -19,6 +19,11 @@ Verify installation:
 webhook --version
 ```
 
+## Enable systemd service
+```sh
+sudo systemctl enable webhook
+```
+
 ## **2. Create a Webhook Configuration File**
 The webhook configuration (`hooks.json`) defines the endpoints and their corresponding scripts.  
 
