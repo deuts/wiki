@@ -308,3 +308,12 @@ fi
 ```
 
 Now when you start your container, your webhook server will be listening to port 9000 of the container, which you can reverse proxy using your favorite application.
+
+### Editing `hooks.json`
+When you edit the hooks.json and/or adding more hooks, you need to restart the webhook server. You can restart this Docker container, or alternatively, run the following command while inside the container:
+
+```sh
+pkill webhook && nohup /usr/bin/webhook -hooks /home/deuts/webhook/hooks.json -verbose > /dev/null 2>&1 &
+```
+
+It is unfortunate that this can't be put into a bash script, it always throw a `Terminated` error.
