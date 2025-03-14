@@ -200,3 +200,75 @@ networks:
 
 This setup provides a robust development environment based on Python with SSH access, necessary utilities, GitHub SSH authentication, and MkDocs serving in the background.
 
+## Adding a webhook server
+The webhook server proves valuable if you want to execute python scripts based on command.
+
+### Add webhook in Dockerfile
+```Dockerfile
+# Install OpenSSH and other necessary dependencies
+RUN apt-get update && \
+    apt-get install -y openssh-server sudo nano htop curl wget zip unzip tree git vim webhook && \
+    rm -rf /var/lib/apt/lists/*
+```
+### Add port 9000 in the EXPOSE command in Dockerfile
+```Dockerfile
+# Expose SSH port
+EXPOSE 22 8000 9000
+```
+
+### Start the service in `entrypoint.sh`
+Add this line before the `exec "$@"` line:
+```sh
+# Start the webhook service
+echo "Starting Webhook server..."
+/usr/bin/webhook -hooks /home/cont_user/webhook/hooks.json -verbose &
+```
+
+### Prepare the webhook files
+
+From the host: 
+
+```sh
+mkdir -p data/webhook
+touch data/webhook/webhook.log
+```
+
+And make sure to maintain the following files and directories structure under `data/webhook` directory:
+```sh
+.
+├── hooks.json
+├── scripts
+│   └── myscript.sh
+└── webhook.log
+```
+
+The hooks.json can look something like this:
+```json hooks.json
+[
+  {
+    "id": "run-script",
+    "execute-command": "/home/deuts/webhook/scripts/myscript.sh",
+    "command-working-directory": "/home/deuts/webhook/scripts",
+    "include-command-output-in-response": true,
+    "pass-environment-to-command": [],
+    "response-headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "status-success": 200,
+    "status-failure": 500,
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "value": "secret123",
+        "parameter": {
+          "source": "url",
+          "name": "token"
+        }
+      }
+    }
+  }
+]
+```
