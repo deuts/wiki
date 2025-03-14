@@ -76,3 +76,15 @@ parent: Notes
 ## Jekyll
 - I really liked the simplicity of `Just the Docs` theme
 - Might be useful for my other wiki/documentation project, at least I'm learning something new
+
+
+## Mintlify
+- Hosted documentation platform built on Next.js and leverages React for its front-end
+- It is not self-hosted, operates as a SaaS (Software-as-a-Service), meaning you need to use their infrastructure rather than hosting it on your own server.
+- Uses MDX (Markdown + JSX) for documentation. This allows you to write standard Markdown while embedding React components directly within your docs.
+- Even on the hobby plan (free version), you can:
+  - Have custom domain
+  - Github integration
+    - You can do edits or collaborate on Github and changes are pushed to your site
+    - It can serve as backup as well if you primarily make edits in the Mintlify platform
+- See my working documentation site at: https://deutsnet.mintlify.app
