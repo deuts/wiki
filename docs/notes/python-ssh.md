@@ -6,9 +6,17 @@ parent: Notes
 ---
 
 # Setting Up a Docker Image Based on python:3.13.2-slim-bookworm
+{: .no_toc }
 
-- Table of Contents
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
 {:toc}
+</details>
+
 
 ## Overview
 This documentation provides a step-by-step guide on setting up a Docker image based on `python:3.13.2-slim-bookworm`. The setup includes:
