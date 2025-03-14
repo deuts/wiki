@@ -242,13 +242,13 @@ And make sure to maintain the following files and directories structure under `d
 └── webhook.log
 ```
 
-The hooks.json can look something like this:
-```json hooks.json
+The `hooks.json` can look something like this:
+```json
 [
   {
     "id": "run-script",
-    "execute-command": "/home/deuts/webhook/scripts/myscript.sh",
-    "command-working-directory": "/home/deuts/webhook/scripts",
+    "execute-command": "/home/cont_user/webhook/scripts/myscript.sh",
+    "command-working-directory": "/home/cont_user/webhook/scripts",
     "include-command-output-in-response": true,
     "pass-environment-to-command": [],
     "response-headers": [
@@ -271,4 +271,30 @@ The hooks.json can look something like this:
     }
   }
 ]
+```
+
+The `myscript.sh` is the script you want to run when this webhook is pinged, which could be something like this:
+```bash
+#!/bin/bash
+
+# Log the webhook trigger
+echo "Webhook triggered at $(date)" >> /home/deuts/webhook/webhook.log
+
+# Capture the output and exit status properly - redirect stderr to a variable
+HUGO_OUTPUT=$(hugo version 2>&1)
+STATUS=$?
+
+# Log the command output for debugging
+echo "Hugo output: $HUGO_OUTPUT" >> /home/deuts/webhook/webhook.log
+echo "Exit status: $STATUS" >> /home/deuts/webhook/webhook.log
+
+# Return the appropriate response based on the exit status
+if [ $STATUS -eq 0 ]; then
+  echo '{"status": "success", "message": "Script executed successfully!"}'
+  exit 0
+else
+  # This will run when hugo command fails (like when it's not found)
+  echo '{"status": "error", "message": "Script failed to execute!"}'
+  exit 1
+fi
 ```
