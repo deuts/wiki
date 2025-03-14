@@ -7,6 +7,9 @@ parent: Notes
 
 # Setting Up a Docker Image Based on python:3.13.2-slim-bookworm
 
+- Table of Contents
+{:toc}
+
 ## Overview
 This documentation provides a step-by-step guide on setting up a Docker image based on `python:3.13.2-slim-bookworm`. The setup includes:
 - Enabling SSH
