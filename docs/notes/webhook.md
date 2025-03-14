@@ -114,6 +114,21 @@ Now, it will be accessible at:
 curl "http://localhost:8080/hooks/run-script?token=secret123"
 ```
 
+### Configure to bind to locahost only
+
+Modify the `ExecStart` line to something like as follows:
+
+```ini
+ExecStart=/usr/bin/webhook -hooks /home/deuts/apps/webhook/hooks.json -ip 127.0.0.1 -port 9000 -verbose
+```
+
+Reload systemd and restart `webhook`:  
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart webhook
+```
+
 ---
 
 ## How to add more hooks
