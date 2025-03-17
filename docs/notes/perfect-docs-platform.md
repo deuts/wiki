@@ -12,6 +12,8 @@ parent: Notes
 	- Delays when writing titles
 	- Delays to reflect the updated page when navigating back to that page
 - Can add members, assign them to groups, and limit access to spaces within the whole instance
+- Cannot nest bullet points within tasks and vice versa
+  - You can only nest tasks within tasks, and bullet points within bullet points but not combine
 
 ## Otterwiki
 - Has permission settings but not as granular as Docmost
