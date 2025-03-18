@@ -36,9 +36,14 @@ parent: Notes
   - If we're talking about PHP and MySQL/MariaDB anyway, why not just use WordPress instead?
 - 3 levels of page hierarchy: `Book >> Chapter >> Page` only
 - With robust API
-- With version history
+- With version (revision) history
 - Exported markdown is not strict markdown. It could sometimes contain HTML tags
 - I just don't like the `Book` method of organizing my documents/pages. I really need a navigation sidebar, and that navigation is not limited to 3 levels deep only.
+- I think I'm finally going for this one:
+  - Advanced access control for books, chapters and pages
+  - I need a way to let my users edit the documents
+    - This is an ever evolving set of documents that I can't just maintain all by myself
+  - They are books after all, so expect a somewhat flat format
 
 ## Hugo
 - More geared towards blogs rather than documentation
