@@ -105,6 +105,20 @@ ssh-keygen -A -f config/ssh_host_keys
 
 By using `ssh-keygen -A -f config/ssh_host_keys`, all required SSH host keys are generated inside the `config/ssh_host_keys` directory before building the Docker image. This ensures that when the container starts, it already has the necessary keys to enable SSH access.
 
+### Create `sshd_config` file
+Under `config/ssh_host_keys` directory, create `sshd_config` file with the following content:
+```sh
+Port 22
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
+```
+
 ### Configuring Passwordless SSH
 To enable passwordless SSH for `cont_user`, place the public key in `authorized_keys`.
 
@@ -129,6 +143,8 @@ chmod 0440 config/sudoers.d/cont_user
 ```
 
 This file is mounted into the container at `/etc/sudoers.d/cont_user`, ensuring `cont_user` has passwordless sudo access.
+
+Important: `/etc/sudoers.d` should be owned by root!
 
 ## Configuring GitHub SSH Access
 To allow the container to interact with private GitHub repositories via SSH, follow these steps:
